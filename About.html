@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboutus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">About Us</h1>
+        <p class="mt-4">
+            Welcome to our personal blog! We are passionate about sharing knowledge, experiences, and stories that inspire and inform. 
+            Our mission is to create a space where readers can find valuable insights and connect with like-minded individuals.
+        </p>
+        <p>
+            Whether it's technology, lifestyle, travel, or personal growth, we aim to cover a wide range of topics that resonate with our audience. 
+            Thank you for visiting, and we hope you enjoy exploring our content!
+        </p>
+        
+    </div>
+</body>
+<style>
+   
+   body
+   {
+   background: linear-gradient(135deg, #e0f7fa, #e1bee7)
+   }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".container");
+
+        const aboutContent = [
+            {
+                title: "Our Mission",
+                description: "To inspire and inform through valuable insights and shared experiences."
+            },
+            {
+                title: "Our Vision",
+                description: "To create a community of like-minded individuals who grow together."
+            },
+            {
+                title: "Our Values",
+                description: "Integrity, creativity, and inclusivity in everything we do."
+            }
+        ];
+
+        const section = document.createElement("div");
+        section.className = "row mt-5";
+
+        aboutContent.forEach(item => {
+            const col = document.createElement("div");
+            col.className = "col-md-4 text-center";
+
+            const card = document.createElement("div");
+            card.className = "card shadow-sm p-3 mb-5 bg-white rounded";
+
+            const cardBody = document.createElement("div");
+            cardBody.className = "card-body";
+
+            const title = document.createElement("h5");
+            title.className = "card-title";
+            title.textContent = item.title;
+
+            const description = document.createElement("p");
+            description.className = "card-text";
+            description.textContent = item.description;
+
+            cardBody.appendChild(title);
+            cardBody.appendChild(description);
+            card.appendChild(cardBody);
+            col.appendChild(card);
+            section.appendChild(col);
+        });
+
+        container.appendChild(section);
+    });
+</script>
+<div class="text-center mt-4">
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+</div>
+</html>

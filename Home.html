@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+            
+        }
+        header {
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .portfolio {
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            margin: 0.5rem 0;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <main>
+        <section class="portfolio">
+            <img src="imga/22-0309 (1).jpg" alt="Your Picture" class="profile-picture">
+            <h2>Francis Ryan Madera</h2>
+            <p>Hello! I'm excited to share my work and thoughts with you. Check out my blog for more insights!</p>
+            <button id="blogButton">Visit My Blog</button>
+        </section>
+    </main>
+    <script>    // Greet the user based on the time of day
+    function greetUser() {
+        const hours = new Date().getHours();
+        let greeting;
+
+        if (hours < 12) {
+            greeting = "Good Morning!";
+        } else if (hours < 18) {
+            greeting = "Good Afternoon!";
+        } else {
+            greeting = "Good Evening!";
+        }
+
+        alert(greeting + " Welcome to my portfolio!");
+    }
+
+    // Ask the user for their name and display a personalized message
+    function askUserName() {
+        const userName = prompt("What's your name?");
+        if (userName) {
+            alert(`Nice to meet you, ${userName}! Feel free to explore my portfolio.`);
+        }
+    }
+
+    // Call the functions when the page loads
+    window.onload = function() {
+        greetUser();
+        askUserName();
+    };
+</script>
+    <script>
+        document.getElementById('blogButton').addEventListener('click', function() {
+            window.location.href = 'blog.html';
+        });
+    </script>
+   
+       
+</body>
+</html>

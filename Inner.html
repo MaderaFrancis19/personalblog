@@ -1,0 +1,94 @@
+<div class="education-container">
+    <h2>Educational Background</h2>
+    <div class="education-item">
+        <img src="BATASAN-NATIONAL-HIGH-SCHOOL.jpg" alt="School Logo" class="education-logo">
+        <div>
+            <h3>Batasan Hills National High School</h3>
+            <p>Graduated: 2017</p>
+        </div>
+    </div>
+    <div class="education-item">
+        <img src="e92e885ae86afe1f42953e63d312caea.png" alt="College Logo" class="education-logo">
+        <div>
+            <h3>ABE INTERNATIONAL BUSINESS COLLEGE</h3>
+            <p>SCIENCE ENGINEERING MATHEMATICS STRAND, 2019</p>
+        </div>
+    </div>
+    <div class="education-item">
+        <img src="OIP.jfif" alt="College Logo" class="education-logo">
+        <div>
+            <h3>QUEZON CITY UNIVERSITY</h3>
+            <p>Bachelor's Of Science  In Information Technology, 2026</p>
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+    <a href="blog.html" style="text-decoration: none;">
+        <button style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Back to Blog
+        </button>
+    </a>
+    <script>
+        const educationItems = document.querySelectorAll('.education-item');
+        let currentIndex = 0;
+
+        function flashEducation() {
+            educationItems.forEach((item, index) => {
+                item.style.opacity = index === currentIndex ? '1' : '0.3';
+            });
+            currentIndex = (currentIndex + 1) % educationItems.length;
+        }
+
+        setInterval(flashEducation, 2000);
+    </script>
+</div>
+<style>
+    .education-container {
+        margin-top: 30px;
+        background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        font-family: Arial, sans-serif;
+    }
+    .education-container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        font-size: 24px;
+    }
+    .education-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .education-item:last-child {
+        margin-bottom: 0;
+    }
+    .education-logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+    }
+    .education-item h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #444;
+    }
+    .education-item p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #666;
+    }
+    body {
+        background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+    }
+</style>
